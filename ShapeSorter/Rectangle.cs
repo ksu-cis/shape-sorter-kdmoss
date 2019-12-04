@@ -4,16 +4,13 @@ using System.Text;
 
 namespace ShapeSorter
 {
-    public class Rectangle
+    public class Rectangle : IShape
     {
         public double Length { get; set; }
 
         public double Width { get; set; }
 
-        public double Area
-        {
-            get { return Length * Width }
-        }
+        public double Area => Length * Width;
 
         public Rectangle(double length, double width)
         {
@@ -21,4 +18,3 @@ namespace ShapeSorter
             Width = width;
         }
     }
-}
